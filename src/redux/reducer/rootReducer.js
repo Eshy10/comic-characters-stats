@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import superHeroReducer from "./superheroReduder";
+import superHeroReducer from "./superHeroReducer";
 import filterReducer from "./filterReducer";
 import heroIDReducer from "./characterReducer";
 

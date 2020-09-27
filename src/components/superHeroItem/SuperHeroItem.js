@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
-import { useStyles } from "./SuperHeroItem.styes";
+import { useStyles } from "./SuperHeroItem.styles";
 import HeroCharacter from "../../api/fetchCharacterApi";
 import { setCharacterID } from "../../redux/actions/index";
 

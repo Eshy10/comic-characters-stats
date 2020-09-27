@@ -6,7 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import spinners from "../../assets/Spinner-1s-200px.gif";
-import { useStyles } from "./superHeroCard.styles";
+import { useStyles } from "./SuperHeroCard.styles";
 
 const SuperHeroCard = ({ id, props, name, imageUrl }) => {
   const classes = useStyles(props);
