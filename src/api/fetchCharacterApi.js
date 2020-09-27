@@ -1,19 +1,23 @@
-import axios from 'axios';
+import axios from "axios";
 
 const HeroCharacter = (() => {
-const getAllCharacter = () => {
-   const promise = axios.get('https://akabab.github.io/superhero-api/api/all.json')
-    const promiseData = promise.then(res => res.data)
-    promise.catch(error => console.log(error))
+  const getAllCharacter = () => {
+    const promise = axios.get(
+      "https://akabab.github.io/superhero-api/api/all.json"
+    );
+    const promiseData = promise.then((res) => res.data);
+    promise.catch((error) => console.log(error));
     return promiseData;
-}
-const getCharacterId = (id) => {
-    const promise = axios.get(`https://akabab.github.io/superhero-api/api/id/${id}.json`)
-    const promiseData = promise.then(res => res.data)
-    promise.catch(error => console.log(error))
+  };
+  const getCharacterId = (id) => {
+    const promise = axios.get(
+      `https://akabab.github.io/superhero-api/api/id/${id}.json`
+    );
+    const promiseData = promise.then((res) => res.data);
+    promise.catch((error) => console.log(error));
     return promiseData;
-}
-return { getAllCharacter, getCharacterId }
-})()
+  };
+  return { getAllCharacter, getCharacterId };
+})();
 
 export default HeroCharacter;

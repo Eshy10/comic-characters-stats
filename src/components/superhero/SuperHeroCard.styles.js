@@ -1,12 +1,12 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 300,
-    },
-  });
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 300,
+  },
+});
 
-  export { useStyles };
+export { useStyles };
