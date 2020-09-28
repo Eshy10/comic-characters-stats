@@ -1,6 +1,6 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
@@ -8,11 +8,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
   },
   circular: {
-    display: "flex",
-    "& > * + *": {
+    display: 'flex',
+    '& > * + *': {
       marginLeft: theme.spacing(2),
     },
   },
 }));
 
-export { useStyles };
+export default useStyles;

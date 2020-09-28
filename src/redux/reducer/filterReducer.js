@@ -1,6 +1,6 @@
-const filterReducer = (state = "", action) => {
+const filterReducer = (state = '', action) => {
   switch (action.type) {
-    case "FILTER_HEROES":
+    case 'FILTER_HEROES':
       return action.payload;
 
     default:

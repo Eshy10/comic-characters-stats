@@ -1,10 +1,10 @@
-body{
+body {
   padding-top: 9em;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0 0 0 / 0%)), url('https://www.desktopbackground.org/p/2015/07/10/977333_free-marvel-superhero-wallpapers-high-quality-resolution-v3y-wallx_1920x1080_h.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-  -webkit-animation: backgroundImageScroll 30s linear 1;
+  -webkit-animation: backgroundimagescroll 30s linear 1;
   -webkit-animation-fill-mode: both;
   animation: backgroundImageScroll linear 30s 1;
   animation-fill-mode: both;
@@ -15,13 +15,13 @@ body{
 }
 
 @keyframes backgroundImageScroll {
-  from {background-position: 0 0;}
-  to {background-position: -200px 0px;}
+  from { background-position: 0 0; }
+  to { background-position: -200px 0; }
 }
 
 @-webkit-keyframes backgroundImageScroll {
-  from {background-position: 0 0;}
-  to {background-position: -200px 0px;}
+  from { background-position: 0 0; }
+  to { background-position: -200px 0; }
 }
 
 a {

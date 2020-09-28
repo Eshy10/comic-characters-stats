@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
-import { Link } from "react-router-dom";
-import { useStyles } from "./SuperHeroItem.styles";
-import HeroCharacter from "../../api/fetchCharacterApi";
-import { setCharacterID } from "../../redux/actions/index";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams, Link } from 'react-router-dom';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import useStyles from './SuperHeroItem.styles';
+import HeroCharacter from '../../api/fetchCharacterApi';
+import { setCharacterID } from '../../redux/actions/index';
 
 const SuperHeroItem = ({ props }) => {
   const classes = useStyles(props);
-  let { superheroIndex } = useParams();
+  const { superheroIndex } = useParams();
 
   const dispatch = useDispatch();
-  const getCharacterID = useSelector((state) => state.character);
+  const getCharacterID = useSelector(state => state.character);
 
   useEffect(() => {
     const heroCharacterID = () => {
-      HeroCharacter.getCharacterId(superheroIndex).then((data) => {
+      HeroCharacter.getCharacterId(superheroIndex).then(data => {
         dispatch(setCharacterID(data));
       });
     };
@@ -39,7 +39,7 @@ const SuperHeroItem = ({ props }) => {
           <CardContent className={classes.center}>
             <Typography
               className={classes.secondaryColor}
-              style={{ fontWeight: "bolder" }}
+              style={{ fontWeight: 'bolder' }}
               gutterBottom
               variant="h5"
               component="h2"
@@ -48,7 +48,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.secondaryColor}
-              style={{ fontWeight: "bold" }}
+              style={{ fontWeight: 'bold' }}
               gutterBottom
               variant="h5"
               component="h2"
@@ -68,7 +68,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.intelligence * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -81,7 +81,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: "1em" }}
+              style={{ marginTop: '1em' }}
               gutterBottom
               component="p"
             >
@@ -92,7 +92,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.strength * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -105,7 +105,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: "1em" }}
+              style={{ marginTop: '1em' }}
               gutterBottom
               component="p"
             >
@@ -116,7 +116,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.speed * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -129,7 +129,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: "1em" }}
+              style={{ marginTop: '1em' }}
               gutterBottom
               component="p"
             >
@@ -140,7 +140,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.durability * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -153,7 +153,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: "1em" }}
+              style={{ marginTop: '1em' }}
               gutterBottom
               component="p"
             >
@@ -164,7 +164,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.power * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -177,7 +177,7 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: "1em" }}
+              style={{ marginTop: '1em' }}
               gutterBottom
               component="p"
             >
@@ -188,7 +188,7 @@ const SuperHeroItem = ({ props }) => {
                 width: getCharacterID.powerstats
                   ? getCharacterID.powerstats.combat * 2
                   : null,
-                fontWeight: "bold",
+                fontWeight: 'bold',
               }}
               className={classes.intelligence}
               variant="body2"
@@ -200,7 +200,7 @@ const SuperHeroItem = ({ props }) => {
                 : null}
             </Typography>
             <Typography
-              style={{ fontWeight: "bold", marginTop: "1em" }}
+              style={{ fontWeight: 'bold', marginTop: '1em' }}
               className={classes.secondaryColor}
               gutterBottom
               variant="h5"
@@ -210,50 +210,54 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Gender:{" "}
+              Gender:
+              {' '}
               {getCharacterID.appearance
                 ? getCharacterID.appearance.gender
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Race:{" "}
+              Race:
+              {' '}
               {getCharacterID.appearance
                 ? getCharacterID.appearance.race
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Height:{" "}
+              Height:
+              {' '}
               {getCharacterID.appearance
                 ? getCharacterID.appearance.height[0]
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Weight:{" "}
+              Weight:
+              {' '}
               {getCharacterID.appearance
                 ? getCharacterID.appearance.weight[1]
                 : null}
             </Typography>
             <Typography
-              style={{ fontWeight: "bold", marginTop: "1em" }}
+              style={{ fontWeight: 'bold', marginTop: '1em' }}
               className={classes.secondaryColor}
               gutterBottom
               variant="h5"
@@ -263,72 +267,78 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              FullName:{" "}
+              FullName:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.fullName
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Alias:{" "}
+              Alias:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.aliases
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Place of Birth:{" "}
+              Place of Birth:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.placeOfBirth
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              First Movie:{" "}
+              First Movie:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.firstAppearance
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Publisher:{" "}
+              Publisher:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.publisher
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Alignment:{" "}
+              Alignment:
+              {' '}
               {getCharacterID.biography
                 ? getCharacterID.biography.alignment
                 : null}
             </Typography>
             <Typography
-              style={{ fontWeight: "bold", marginTop: "1em" }}
+              style={{ fontWeight: 'bold', marginTop: '1em' }}
               className={classes.secondaryColor}
               gutterBottom
               variant="h5"
@@ -338,15 +348,16 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Occupation:{" "}
+              Occupation:
+              {' '}
               {getCharacterID.work ? getCharacterID.work.occupation : null}
             </Typography>
             <Typography
-              style={{ fontWeight: "bold", marginTop: "1em" }}
+              style={{ fontWeight: 'bold', marginTop: '1em' }}
               className={classes.secondaryColor}
               gutterBottom
               variant="h5"
@@ -356,22 +367,24 @@ const SuperHeroItem = ({ props }) => {
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Occupation:{" "}
+              Occupation:
+              {' '}
               {getCharacterID.connections
                 ? getCharacterID.connections.groupAffiliation
                 : null}
             </Typography>
             <Typography
               className={classes.primaryColor}
-              style={{ marginTop: ".5em" }}
+              style={{ marginTop: '.5em' }}
               variant="body2"
               component="p"
             >
-              Occupation:{" "}
+              Occupation:
+              {' '}
               {getCharacterID.connections
                 ? getCharacterID.connections.relatives
                 : null}
@@ -381,12 +394,13 @@ const SuperHeroItem = ({ props }) => {
         <Link to="/">
           <Typography
             className={classes.secondaryColor}
-            style={{ marginLeft: "2em", fontWeight: "bold" }}
+            style={{ marginLeft: '2em', fontWeight: 'bold' }}
             gutterBottom
             variant="h5"
             component="h2"
           >
-            Back to{" "}
+            Back to
+            {' '}
             <span aria-label="house" role="img">
               🏚️
             </span>
@@ -396,6 +410,14 @@ const SuperHeroItem = ({ props }) => {
       </Card>
     </div>
   );
+};
+
+SuperHeroItem.propTypes = {
+  props: PropTypes.func,
+};
+
+SuperHeroItem.defaultProps = {
+  props: () => {},
 };
 
 export default SuperHeroItem;

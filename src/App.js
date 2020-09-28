@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Container from "@material-ui/core/Container";
-import HomePage from "./container/Homepage";
-import SuperHeroItem from "./components/superHeroItem/SuperHeroItem";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Container from '@material-ui/core/Container';
+import HomePage from './container/Homepage';
+import SuperHeroItem from './components/superHeroItem/SuperHeroItem';
+import './App.css';
 
 function App() {
   return (

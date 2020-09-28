@@ -5,13 +5,11 @@ import store from './redux/store';
 import './index.css';
 import App from './App';
 
-
 ReactDOM.render(
-  <Provider store = {store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
