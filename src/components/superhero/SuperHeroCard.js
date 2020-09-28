@@ -25,7 +25,7 @@ const SuperHeroCard = ({
 
           <CardContent>
             <Typography
-              style={{ color: '#0000FF', fontWeight: 'bold' }}
+              style={{ color: '#0000FF', fontWeight: 'bold', fontFamily: 'cursive' }}
               gutterBottom
               variant="h5"
               component="h2"

@@ -32,9 +32,11 @@ const useStyles = makeStyles({
   },
   secondaryColor: {
     color: '#929eaa',
+    fontFamily: 'cursive',
   },
   primaryColor: {
     color: '#f5f5dc',
+    fontFamily: 'cursive',
   },
 });
 

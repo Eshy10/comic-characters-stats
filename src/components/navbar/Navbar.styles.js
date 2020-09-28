@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      fontFamily: 'cursive',
     },
   },
   search: {
