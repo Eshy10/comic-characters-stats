@@ -43,7 +43,7 @@ This project is based on a catalogue of statistics. The Comic character web page
 
 ## Live Link (Heroku)
 
-[Click here]( https://commic-characterx.herokuapp.com/)
+[Click here]( https://comic-characters-stats.herokuapp.com/)
 
 <!-- INSTALLATION -->
 
