@@ -19,9 +19,7 @@ function App() {
             path="/superhero/:superheroIndex"
             exact
             component={SuperHeroItem}
-          >
-            <SuperHeroItem />
-          </Route>
+          />
         </Switch>
       </div>
     </Router>

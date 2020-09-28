@@ -33,7 +33,7 @@ const SuperHeroItem = ({ props }) => {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={getCharacterID.images ? getCharacterID.images.lg : null}
+            image={getCharacterID.images ? getCharacterID.images.lg : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/no-portrait.jpg'}
             title="comic character"
           />
           <CardContent className={classes.center}>
