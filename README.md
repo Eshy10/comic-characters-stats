@@ -51,11 +51,11 @@ This project is based on a catalogue of statistics. The Comic character web page
 
 1. Clone the repo
 ```sh
-git clone https://github.com/Eshy10/react-calculator.git
+git clone https://github.com/Eshy10/comic-characters-stats.git
 ```
 2. Open the project Directory in your local machine
 ```
-cd react-calculator.git
+cd comic-characters-stats
 ```
 1. Install NPM packages
 ```sh
