@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Container from '@material-ui/core/Container';
+import HomePage from './container/Homepage';
+import SuperHeroItem from './components/superHeroItem/SuperHeroItem';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Container maxWidth="xl">
+              <HomePage />
+            </Container>
+          </Route>
+          <Route
+            path="/superhero/:superheroIndex"
+            exact
+            component={SuperHeroItem}
+          />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
