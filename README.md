@@ -26,6 +26,7 @@
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
 - [Live Link (Heroku)](#live-link-heroku)
+- [Video Link (An explanation of the project, react and virtual dom, data flow in redux and redux)](#video-link-an-explanation-of-the-project-react-and-virtual-dom-data-flow-in-redux-and-redux)
 - [Installation](#installation)
 - [Built With](#built-with)
 - [Authors](#authors)
@@ -44,6 +45,9 @@ This project is based on a catalogue of statistics. The Comic character web page
 ## Live Link (Heroku)
 
 [Click here]( https://comic-characters-stats.herokuapp.com/)
+
+## Video Link (An explanation of the project, react and virtual dom, data flow in redux and redux)
+[click here](https://www.loom.com/share/11ea588548864794a049d01b58c4986f)
 
 <!-- INSTALLATION -->
 
