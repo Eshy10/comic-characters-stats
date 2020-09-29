@@ -10,7 +10,7 @@ describe('Navbar', () => {
     onChange: jest.fn(),
   };
 
-  it('should render a <Typography /> to display the maximum length of the comment', () => {
+  it('should render a <Typography />', () => {
     const wrapper = shallow(<Navbar {...fieldProps} />);
     expect(wrapper.find(Typography)).toHaveLength(1);
   });

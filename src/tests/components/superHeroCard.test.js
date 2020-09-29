@@ -11,7 +11,7 @@ describe('Hero Card', () => {
     name: 'super man',
     imageUrl: 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/no-portrait.jpg',
   };
-  it('should render a <Typography /> to display the maximum length of the comment', () => {
+  it('should render a <Typography />', () => {
     const wrapper = shallow(<SuperHeroCard {...fieldProps} />);
     expect(wrapper.find(Typography)).toHaveLength(1);
   });
