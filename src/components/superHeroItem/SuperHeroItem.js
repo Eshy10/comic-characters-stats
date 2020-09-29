@@ -383,7 +383,7 @@ const SuperHeroItem = ({ props }) => {
               variant="body2"
               component="p"
             >
-              Occupation:
+              Relatives:
               {' '}
               {getCharacterID.connections
                 ? getCharacterID.connections.relatives
